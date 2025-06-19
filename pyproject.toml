@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "playwright-ui-framework-template"
+version = "0.1.0"
+description = "Playwright UI Test Framework Template"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pytest>=8.3.5",
+    "pytest-playwright>=0.7.0",
+    "pyyaml>=6.0.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+markers = [
+    "smoke: mark a test as a smoke test",
+    "regression: mark a test as a regression test",
+]
+
